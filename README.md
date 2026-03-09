@@ -38,6 +38,7 @@ You can test the application online:
 
 ## 📁 Project Structure
 
+```
 qrcode-generator
 │
 ├── index.html
@@ -53,6 +54,7 @@ qrcode-generator
 │ │ └── qrcode.min.js
 │ │
 │ └── img
+```
 
 ---
 
