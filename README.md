@@ -1,33 +1,42 @@
-# 🖼️ Image to WebP Converter
+# 🔳 QR Code Generator
 
-A lightweight and fast **Image to WebP Converter** built using pure JavaScript.
+A simple and responsive **QR Code Generator** built using JavaScript.
 
-Convert images directly in your browser without uploading them to any server.
-
-This ensures **privacy, speed, and security**.
+This project allows users to generate QR codes instantly from any text or URL and download the generated code as an image.
 
 ---
 
-## 🚀 Features
+## 🌐 Example Demo
 
-✅ Drag & Drop images  
-✅ Multiple image upload  
-✅ Instant WebP conversion  
-✅ Download converted images  
-✅ Fully client-side  
-✅ Responsive layout  
+You can test the application online:
+
+👉 https://rodrigopensky.github.io/qrcode-generator/
 
 ---
 
-## 🖥️ Demo
+## ✨ Features
 
-Example usage:
-
-https://rodrigopensky.github.io/image-to-webp-converter/
+- Generate QR Code from text or URL
+- Real-time QR code generation
+- Default QR code when the input is empty
+- Download QR Code as PNG
+- Responsive interface using Bootstrap
+- Clean and modular code structure
 
 ---
 
-## 📂 Project Structure
+## 🧰 Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- QRCode.js
+- html2canvas
+
+---
+
+## 📁 Project Structure
 
 qrcode-generator
 │
@@ -50,7 +59,6 @@ qrcode-generator
 ## 🚀 How to Run
 
 1. Clone the repository
-
 git clone https://github.com/rodrigopensky/qrcode-generator.git
 
 2. Open the project folder
