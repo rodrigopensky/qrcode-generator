@@ -4,25 +4,12 @@ body{
 
 #qr-wrapper{
     display:inline-block;
-    padding:25px;
+    padding:20px;
     background:white;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    min-width:260px;
-    min-height:260px;
 }
-
-#placeholder{
-    width:220px;
-    height:220px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:2px dashed #ccc;
-    border-radius:10px;
-    margin:auto;
-}
-
 #qrcode{
-    margin:auto;
+    display:flex;
+    justify-content:center;
 }

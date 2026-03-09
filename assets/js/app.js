@@ -1,32 +1,48 @@
 /**
  * QR Code Generator Application
  * ----------------------------------
- * This script handles:
- * 
- * - QR Code generation
- * - Input field events
- * - Downloading the generated QR Code as PNG
+ * Features:
+ * - Default QR Code
+ * - Real-time generation
+ * - Clear input on first focus
+ * - Download QR Code
  */
 
-const qrCode = new QRCode(document.getElementById("qrcode"))
+// Default URL
+const defaultURL = "https://rodrigopensky.github.io/qrcode-generator/"
+
+// Control variable to clear input only once
+let firstFocus = true
+
+// Initialize QR Code
+const qrCode = new QRCode(document.getElementById("qrcode"), {
+    text: defaultURL,
+    width: 220,
+    height: 220
+})
+
+// Set default value in input
+const input = document.getElementById("qr-input")
+input.value = defaultURL
+
 
 /**
- * Generates a QR Code based on the user input
+ * Generate QR Code
  */
 function generateQRCode() {
 
-    const input = document.getElementById("qr-input")
-    const value = input.value.trim()
+    let value = input.value.trim()
 
-    if (!value) return
-
-    document.getElementById("placeholder").style.display = "none"
+    if (value === "") {
+        value = defaultURL
+    }
 
     qrCode.makeCode(value)
 }
 
+
 /**
- * Download QR Code as PNG
+ * Download QR Code
  */
 function downloadQRCode() {
 
@@ -45,11 +61,27 @@ function downloadQRCode() {
 
 
 /**
- * Events
+ * Clear input only the first time user clicks
  */
+input.addEventListener("focus", function () {
 
-document.getElementById("qr-input")
-    .addEventListener("keyup", generateQRCode)
+    if (firstFocus) {
+        input.value = ""
+        firstFocus = false
+    }
 
-document.getElementById("download-btn")
+})
+
+
+/**
+ * Update QR Code while typing
+ */
+input.addEventListener("input", generateQRCode)
+
+
+/**
+ * Download event
+ */
+document
+    .getElementById("download-btn")
     .addEventListener("click", downloadQRCode)
