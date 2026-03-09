@@ -37,18 +37,24 @@
                     placeholder="Type text or URL">
 
                 <!-- QR Code Output -->
-                <div id="qr-wrapper">
+                <div id="qr-wrapper" class="text-center">
+
+                    <div id="placeholder">
+                        <p class="text-muted">Your QR Code will appear here</p>
+                    </div>
+
                     <div id="qrcode"></div>
+
                 </div>
 
                 <!-- Download Button -->
-                <button
-                    id="download-btn"
-                    class="btn btn-primary mt-4">
-                    Download QR Code
-                </button>
-
-            </div>
+                <div class="text-center mt-4">
+                    <button
+                        id="download-btn"
+                        class="btn btn-primary">
+                        Download QR Code
+                    </button>
+                </div>
 
         </div>
 

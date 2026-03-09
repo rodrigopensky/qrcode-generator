@@ -20,6 +20,8 @@ function generateQRCode() {
 
     if (!value) return
 
+    document.getElementById("placeholder").style.display = "none"
+
     qrCode.makeCode(value)
 }
 
